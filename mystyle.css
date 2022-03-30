@@ -27,6 +27,7 @@
   display: none;
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .item.active {
@@ -43,7 +44,6 @@
   width: 80%;
   height: 100%;
   float: left;
-  position: relative;
 }
 .item-container-right {
   width: 20%;
