@@ -45,6 +45,7 @@
   height: 100%;
   float: left;
 }
+
 .item-container-right {
   width: 20%;
   float: left;
@@ -54,17 +55,20 @@
 .right-image {
   height: 20%;
   position: relative;
+  filter: grayscale(0.8);
 }
-.right-image img:hover {
-    border: 2px solid white;
-    filter: grayscale(0);
+
+.right-image-active {
+  border: 2px solid white;
+  filter: none;
 }
+
 .right-image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  filter: grayscale(0.5);
 }
+
 .item-container-left-text {
   position: absolute;
   color: white;
@@ -72,6 +76,7 @@
   right: 20px;
   text-align: end;
 }
+
 /* Navigazione */
 .prev,
 .next {
