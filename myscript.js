@@ -58,13 +58,43 @@ for(let i=0; i<items.length; i++){
     itemText.append(titleText, subtitleText);
     titleText.append(country);
     divItem.append(img, itemText);
+    if(i == 4){
+        divItem.classList.add("active");
+    }
 }
 
+
 let currentIndex = 0;
+
 const listaImmagini = document.getElementsByClassName("item");
 const next = document.querySelector(".next");
-next.addEventListener("click", function () {
+next.addEventListener("click", function () {  
   listaImmagini[currentIndex].classList.remove("active");
   currentIndex += 1;
   listaImmagini[currentIndex].classList.add("active");
+  console.log(listaImmagini);
+    // if(currentIndex==4){
+    //     currentIndex = 0;
+    //     next.addEventListener("click", function () {  
+    //         listaImmagini[currentIndex].classList.remove("active");
+    //         currentIndex += 1;
+    //         // listaImmagini[currentIndex].classList.add("active");
+    //         console.log(listaImmagini);
+    //     });
+    // }
 });
+
+const prev = document.querySelector(".prev");
+prev.addEventListener("click", myFunction);
+
+function myFunction() {
+    listaImmagini[currentIndex].classList.remove("active");
+    currentIndex -= 1;
+    listaImmagini[currentIndex].classList.add("active");
+    console.log(listaImmagini);
+}
+
+
+
+
+
